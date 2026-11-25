@@ -1,0 +1,755 @@
+/* ==========================================================================
+   1. ZMIENNE
+   ========================================================================== */
+
+:root {
+    --color-main-background: #F6F1F0;
+    --color-main-color: #E05523;
+    --color-second-color: #293571;
+    --color-main-text: #191A22;
+    --color-second-text: hsla(235, 14%, 15%, 0.80);
+    --color-bright-background: #FFFFFF;
+    --color-opacity-bright-background: #ffffffb0;
+}
+
+.h1-mobile{
+    font-family: "Barlow Condensed", sans-serif;
+    color: var(--color-main-text);
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+}
+
+.h2-mobile{
+    font-family: "Barlow Condensed", sans-serif;
+    color: var(--color-main-text);
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: 0.01em;
+}
+
+.h3-mobile{
+    font-family: "Barlow Condensed", sans-serif;
+    color: var(--color-main-text);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+}
+
+.button-mobile{
+    font-family: "Barlow Condensed", sans-serif;
+    color: var(--color-main-text);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.body-mobile{
+    font-family: 'Inter', sans-serif;
+    color: var(--color-main-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0;
+}
+
+.caption-mobile{
+    font-family: 'Inter', sans-serif;
+    color: var(--color-main-text);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0;
+}
+
+.overline-mobile{
+    font-family: 'Inter', sans-serif;
+    color: var(--color-main-text);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   1. ZMIENNE BUTTON
+   ========================================================================== */
+
+.button-main {
+    display: inline-block;
+    background-color: var(--color-main-color);
+    color: var(--color-bright-background);
+    padding: 8px 24px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-second {
+    display: inline-block;
+    border: solid 2px var(--color-second-color);
+    color: var(--color-main-text);
+    padding: 8px 24px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);   
+}
+
+.button-main,
+.button-second {
+    transition: transform 0.30s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    cursor: pointer;
+}
+
+.button-main:hover,
+.button-second:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.30);
+}
+
+.button-main:active,
+.button-second:active {
+    transform: translateY(0) scale(0.99);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-main:hover {
+    background-color: #C94A1B;          
+}
+
+.button-second:hover {
+    background-color: rgba(22, 32, 80, 0.1);  
+}
+
+/* ==========================================================================
+   1. ZMIENNE COLOR
+   ========================================================================== */
+
+.main-color {
+    color: var(--color-main-color);
+}
+
+.white-color {
+    color: var(--color-bright-background);
+}
+
+.second-white-color {
+    color: var(--color-opacity-bright-background);
+}
+
+.second-text-color {
+    color: var(--color-second-text);
+}
+
+/* ==========================================================================
+   2. RESET
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+/* ==========================================================================
+   3. STYLE OGÓLNE (body, obrazki, linki)
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--color-main-background);
+}
+
+img {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+button {
+    border: none;
+}
+
+/* ==========================================================================
+   4. HEADER
+   ========================================================================== */
+
+   header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 20px;
+   }
+
+   .header-right {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+   }
+
+   /* ==========================================================================
+   5. HERO
+   ========================================================================== */
+
+    main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+   }
+
+   .hero-gora {
+    background-image: url(/img/main.png);
+    background-size: cover;
+    height: 261px;
+   }
+
+   .hero-zdjecie {
+    border-radius: 0;
+    display: block;
+   }
+
+   .hero-tekst {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 300px;
+    justify-content: center;
+    height: 100%;
+    padding-inline: 20px;
+   }
+
+   .hero-przyciski {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-inline: 20px;
+   }
+
+/* ==========================================================================
+   5. PASEK ZAUFANIA
+========================================================================== */
+
+.pasek {
+    display: flex;
+    background: linear-gradient(to top, #26283A, var(--color-main-text));
+    padding: 16px 20px;
+}
+
+.pasek-element {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pasek-element + .pasek-element {
+    border-left: 2px solid var(--color-opacity-bright-background); 
+}
+
+.pasek p {
+    color: var(--color-main-background); 
+}
+
+/* ==========================================================================
+   6. USŁUGI
+========================================================================== */
+
+.uslugi {
+    padding: 64px 20px 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.uslugi-tytul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;    
+}
+
+.uslugi-tytul-gora {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;    
+}
+
+.uslugi-karta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bright-background);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    width: 60vw;
+    aspect-ratio: 3 / 4;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+.uslugi-karta-text {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px 16px 16px;
+    margin-top: -24px;
+    align-items: center;
+    min-height: 200px;
+}
+
+.uslugi-karta-text .h3-mobile {
+    min-height: 2.4em;
+}
+
+.uslugi-karta-text-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    box-shadow: none;
+}
+
+.uslugi-karta-zdj img {
+    border-radius: 16px 16px 0 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+.uslugi-kreski {
+    display: flex;
+    justify-content: center;  
+    gap: 8px;                
+    width: 40%;
+    margin: 0 auto; 
+}
+
+.kreska {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #22232d59;
+    transition: background-color 0.3s;
+}
+
+.kreska-aktywna {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: var(--color-main-color);
+}
+
+.uslugi-karuzela {
+    display: flex;
+    gap: 16PX;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 32px 20px;
+    margin: -32px -20px;
+}
+
+/* ==========================================================================
+   7. REALIZACJE
+========================================================================== */
+
+.realizacje {
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.realizacje-tytul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.realizacje-siatka {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 rowne kolumny */
+    gap: 16px;
+}
+
+.realizacje-karta {
+    position: relative;               
+    aspect-ratio: 2 / 3;         
+    border-radius: 16px;
+    overflow: hidden;                
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.realizacje-karta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;               
+    display: block;
+    border-radius: 0;             
+    box-shadow: none;         
+}
+
+.realizacje-opis {
+    position: absolute;            
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;         
+}
+
+.realizacje-przycisk {
+    display: block;          
+}
+
+/* ==========================================================================
+   8. JAK DZIAŁAMY
+========================================================================== */
+
+.jak {
+    background: linear-gradient(to top, #26283A, var(--color-main-text));  /* to samo tlo co .pasek, spojny wyglad */
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.jak-tytul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.jak-krok {
+    display: flex;                   
+    gap: 32px;
+    align-items: center;           
+    padding: 24px 0;
+}
+
+.jak-krok + .jak-krok {
+    border-top: 2px solid var(--color-opacity-bright-background); 
+}
+
+.jak-numer {
+    font-size: 64px;              
+    min-width: 42px;              
+    color: var(--color-opacity-bright-background)
+}
+
+.jak-tekst {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jak-opis {
+    color: var(--color-opacity-bright-background)
+}
+
+/* ==========================================================================
+   9. OPINIE
+========================================================================== */
+
+.opinie {
+    padding: 48px 20px 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.opinie-tytul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.opinie-karuzela {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 32px 20px;         
+    margin: -32px -20px;     
+    scroll-padding-left: 20px;    
+}
+
+.opinie-karta {
+    flex-shrink: 0;            
+    width: 70vw;
+    scroll-snap-align: start;     
+    background-color: var(--color-bright-background);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;     
+    aspect-ratio: 3 / 3;     
+}
+
+.opinie-gora {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.opinie-cudzyslow {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 64px;
+    line-height: 0.7;                
+    color: var(--color-second-text);
+    opacity: 0.35;                
+}
+
+.opinie-gwiazdki {     
+    font-size: 22px;
+    letter-spacing: 4px;       
+    height: 50px;     
+    display: flex;
+    align-items: flex-end;
+}
+
+/* ==========================================================================
+   10. KONTAKT
+========================================================================== */
+
+.kontakt {
+    background: linear-gradient(to top, #26283A, var(--color-main-text));  /* to samo tlo co .pasek i .jak */
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.kontakt-tytul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.kontakt-przycisk {
+    display: block;                   
+    text-align: center;
+}
+
+.kontakt-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 20px;
+    color: var(--color-bright-background);
+}
+
+.formularz {
+    background-color: var(--color-main-background);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 100);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formularz-pole {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formularz-etykieta {
+    display: flex;
+}
+
+.formularz input,
+.formularz textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(25, 26, 34, 0.1); 
+    font-family: 'Inter', sans-serif;      
+    font-size: 16px;                     
+    color: var(--color-main-text);
+}
+
+.formularz textarea {
+    min-height: 100px;
+    resize: vertical;                   
+}
+
+.formularz input:focus,
+.formularz textarea:focus {
+    outline: 2px solid var(--color-main-text); /* wyrazna ramka po kliknieciu, wazne dla czytelnosci */
+}
+
+.formularz-przycisk {
+    display: block;
+    width: 100%;
+    border: none;                          
+}
+
+.formularz-sukces {
+    animation: wylon 0.5s ease;
+}
+
+@keyframes wylon {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ==========================================================================
+   11. STOPKA
+========================================================================== */
+
+.stopka {
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.stopka-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stopka-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 20px;         
+}
+
+.stopka-facebook {
+    display: flex;           
+    align-items: center;      
+    gap: 8px;
+}
+
+.stopka-facebook span {
+    display: flex;             
+    align-items: center;
+    gap: 8px;
+}
+
+.stopka-facebook svg {
+    flex-shrink: 0; 
+}
+
+.stopka-dol {
+    border-top: 2px solid var(--color-second-text); 
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;         
+}
+
+/* ==========================================================================
+   12. MENU
+========================================================================== */
+
+body.menu-aktywne {
+    overflow: hidden;        
+}
+
+.menu-otworz,
+.menu-zamknij {
+    background: none;            
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.menu {
+    position: fixed;             
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100dvh;                 
+    background-color: var(--color-main-background);
+    padding: 24px 20px;
+    z-index: 100;                     
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    transform: translateX(-100%);     
+    visibility: hidden;              
+    transition: transform 0.4s ease, visibility 0.4s;
+}
+
+.menu-otwarte {
+    transform: translateX(0);      
+    visibility: visible;
+}
+
+.menu-zamknij {
+    align-self: flex-end;         
+}
+
+.menu-linki {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-link {
+    text-decoration: none;          
+    padding: 24px 0;
+    border-bottom: 2px solid var(--color-second-text);
+    opacity: 0;                      
+    transform: translateX(-24px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menu-link:last-child {
+    border-bottom: none;
+}
+
+.menu-otwarte .menu-link {
+    opacity: 1;                    
+    transform: translateX(0);
+}
+
+.menu-otwarte .menu-link:nth-child(1) { transition-delay: 0.15s; }  
+.menu-otwarte .menu-link:nth-child(2) { transition-delay: 0.22s; }
+.menu-otwarte .menu-link:nth-child(3) { transition-delay: 0.29s; }
+.menu-otwarte .menu-link:nth-child(4) { transition-delay: 0.36s; }
+.menu-otwarte .menu-link:nth-child(5) { transition-delay: 0.43s; }
+
+/* ==========================================================================
+   12. ANIMACJE
+========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pojawia {
+    opacity: 0;
+}
+
+.pojawia.widoczny {
+    opacity: 1;
+    animation: pojaw 0.6s ease;
+}
+
+@keyframes pojaw {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pojawia { opacity: 1; }
+    .pojawia.widoczny { animation: none; }
+    html { scroll-behavior: auto; }
+}
